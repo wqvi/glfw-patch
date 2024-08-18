@@ -1,3 +1,7 @@
+# What is this patch?
+
+When playing Vintage Story on a minimalist installation of Gentoo glfw will throw errors which aren't important. These errors cause Vintage Story to crash. In order to get Vintage Story to load, I disabled these error messages. If you still experience the issue when applying this patch make sure to delete libglfw from the Vintage Story Lib/ directory.
+
 # GLFW
 
 [![Build status](https://github.com/glfw/glfw/actions/workflows/build.yml/badge.svg)](https://github.com/glfw/glfw/actions)
