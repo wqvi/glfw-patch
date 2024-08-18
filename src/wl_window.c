@@ -1950,8 +1950,8 @@ void _glfwPlatformSetWindowTitle(_GLFWwindow* window, const char* title)
 void _glfwPlatformSetWindowIcon(_GLFWwindow* window,
                                 int count, const GLFWimage* images)
 {
-    _glfwInputError(GLFW_PLATFORM_ERROR,
-                    "Wayland: Setting window icon not supported");
+    /*_glfwInputError(GLFW_PLATFORM_ERROR,
+                    "Wayland: Setting window icon not supported");*/
 }
 
 void _glfwPlatformGetWindowPos(_GLFWwindow* window, int* xpos, int* ypos)
@@ -1959,16 +1959,19 @@ void _glfwPlatformGetWindowPos(_GLFWwindow* window, int* xpos, int* ypos)
     // A Wayland client is not aware of its position, so just warn and leave it
     // as (0, 0)
 
-    _glfwInputError(GLFW_PLATFORM_ERROR,
-                    "Wayland: Window position retrieval not supported");
+    *xpos = 0;
+    *ypos = 0;
+
+    /*_glfwInputError(GLFW_PLATFORM_ERROR,
+                    "Wayland: Window position retrieval not supported");*/
 }
 
 void _glfwPlatformSetWindowPos(_GLFWwindow* window, int xpos, int ypos)
 {
     // A Wayland client can not set its position, so just warn
 
-    _glfwInputError(GLFW_PLATFORM_ERROR,
-                    "Wayland: Window position setting not supported");
+    /*_glfwInputError(GLFW_PLATFORM_ERROR,
+                    "Wayland: Window position setting not supported");*/
 }
 
 void _glfwPlatformGetWindowSize(_GLFWwindow* window, int* width, int* height)
@@ -2148,8 +2151,8 @@ void _glfwPlatformRequestWindowAttention(_GLFWwindow* window)
 
 void _glfwPlatformFocusWindow(_GLFWwindow* window)
 {
-    _glfwInputError(GLFW_PLATFORM_ERROR,
-                    "Wayland: Focusing a window requires user interaction");
+    /*_glfwInputError(GLFW_PLATFORM_ERROR,
+                    "Wayland: Focusing a window requires user interaction");*/
 }
 
 void _glfwPlatformSetWindowMonitor(_GLFWwindow* window,
